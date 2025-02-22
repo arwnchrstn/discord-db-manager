@@ -7,8 +7,8 @@
     "production": "npm run build && node dist/index.js",
     "build": "tsc",
     "clean:build": "rm -rf dist",
-    "dev:migrate": "npx prisma migrate dev",
-    "prod:migrate": "npx prisma migrate deploy"
+    "dev:migrate": "prisma migrate dev",
+    "prod:migrate": "prisma migrate deploy"
   },
   "keywords": [],
   "author": "",
