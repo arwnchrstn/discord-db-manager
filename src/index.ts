@@ -2,6 +2,7 @@ import Express from 'express'
 import DiscordRoute from './routes/discord.route'
 import Cors from 'cors'
 import queueVerify from './middleware/verifyRequest'
+import { Request, Response } from 'express'
 
 const app = Express()
 app.use(Cors({
@@ -11,6 +12,17 @@ app.use(Express.json())
 
 app.use('/api/dbmanager/', queueVerify, DiscordRoute)
 
+app.get('/health', (req: Request, res: Response) => {
+  console.log('Health: ' + new Date().toISOString())
+  res.send('Health')
+})
+
 app.listen(5100, () => {
   console.log(`Database running on port 5100`)
+
+  setInterval(() => {
+    fetch(process.env.service_url as string)
+    .then()
+    .catch()
+  }, 1000 * 60 * 8)
 })
