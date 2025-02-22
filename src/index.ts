@@ -17,8 +17,8 @@ app.get('/health', (req: Request, res: Response) => {
   res.send('Health')
 })
 
-app.listen(5100, () => {
-  console.log(`Database running on port 5100`)
+app.listen(10002, () => {
+  console.log(`Database running on port 10002`)
 
   setInterval(() => {
     fetch(process.env.service_url as string)
