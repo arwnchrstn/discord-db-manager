@@ -14,3 +14,10 @@ jobs:
           curl -X POST \
             -H "Authorization: Bearer ${{secrets.RENDER_API_KEY}}" \
             https://api.render.com/v1/services/srv-cvpvn62dbo4c7397m8ng/resume
+  
+  trigger-api-build:
+    runs-on: ubuntu-latest
+    needs: run-script
+    steps:
+      - name: Trigger api endpoint to build
+        run: curl -X GET https://discord-db-manager.onrender.com/health
