@@ -1,4 +1,4 @@
-name: Suspend discord bot consumer every 10:30 AM PHT, 15th and 28th of month
+name: Suspend discord dot db service every 10:30 AM PHT, 15th and 28th of month
 
 on:
   schedule:

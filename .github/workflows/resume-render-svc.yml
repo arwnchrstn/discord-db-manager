@@ -1,4 +1,4 @@
-name: Resume discord bot consumer every 9:00 AM PHT, 15th and 28th of month
+name: Resume discord bot db service every 9:00 AM PHT, 15th and 28th of month
 
 on:
   schedule:
