@@ -1,8 +1,8 @@
-name: Suspend discord dot db service every 10:30 AM PHT, 15th and 28th of month
+name: Suspend discord dot db service every 2:30 PM PHT, 15th and 28th of month
 
 on:
   schedule:
-    - cron: '30 2 15,28 * *'
+    - cron: '30 7 15,28 * *'
   workflow_dispatch:
 
 jobs:
